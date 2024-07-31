@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ignite Innovation | Data Engineering Event</title>
+        <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/college_logo.png' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      </head>
+<body>
+
+    <div id="particles-js"></div> 
+    <header>
+        <div class="container">
+            <div id="college_title">
+                <div id="college_logo">
+                    <a href="https://www.mvgrce.com/" target="_blank">
+                        <img src="{% static 'images/college_logo.png' %}" alt="college_logo">
+                    </a>
+                </div>
+                <div id="college_sub_title">
+                    <h1>Maharaj Vijayaram Gajapathi Raj College of Engineering (Autonomous)</h1>
+                    <h1 id="dept_name">Department Of Data Engineering</h1>
+                </div>
+                <div id="department_logo">
+                    <a href="" target="_parent">
+                        <img src="{% static 'images/department_logo.png' %}" alt="Department Logo"> 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <section id="hero">
+        <div class="hero-image-container">
+          <img src="{% static 'images/AI.avif' %}" alt="AI">
+          <img src="{% static 'images/Cyber.jpg' %}" alt="Cyber">
+          <img src="{% static 'images/datascience.jpg' %}" alt="Data Science">
+          <img src="{% static 'images/digital marketing.jpg' %}" alt="Digital Marketing">
+    
+          <img src="{% static 'images/AI.avif' %}" alt="AI"> 
+          <img src="{% static 'images/Cyber.jpg' %}" alt="Cyber"> 
+          <img src="{% static 'images/datascience.jpg' %}" alt="Data Science"> 
+          <img src="{% static 'images/digital marketing.jpg' %}" alt="Digital Marketing"> 
+        </div>
+        <div class="container hero-text"> 
+          <div class="hero-content">
+            <h1 data-aos="fade-up">Ignite Innovation</h1>
+            <p data-aos="fade-up" data-aos-delay="200">A Data Engineering Brainstorming Extravaganza</p>
+            <a href="#register" class="btn" data-aos="fade-up" data-aos-delay="400">Register Now</a>
+          </div>
+        </div>
+      </section>
+
+    <section id="about">
+        <div class="container">
+          <h2 data-aos="fade-up">About the Event</h2>
+          <p data-aos="fade-up" data-aos-delay="200" style="text-align: center; margin-bottom: 10px;">
+            Are you brimming with innovative ideas and eager to explore the forefront of technological advancements? Then <strong>Ignite Innovation</strong> is the event for you! This dynamic event offers a platform to delve into cutting-edge technologies, share your vision, and learn from like-minded individuals. 
+          </p>
+      
+          <p data-aos="fade-up" data-aos-delay="300">
+            <strong>Here's what awaits you:</strong>
+          </p>
+      
+          <ul data-aos="fade-up" data-aos-delay="400">
+            <li>
+              <strong>Present Your Ideas:</strong> Share your insights and project ideas on topics shaping the future, including:
+              <ul>
+                <li>Artificial Intelligence (AI)</li>
+                <li>Machine Learning (ML)</li>
+                <li>Digital Marketing Trends</li>
+                <li>And More!</li>
+              </ul>
+            </li>
+      
+            <li>
+              <strong>Engage & Collaborate:</strong>
+              <ul>
+                <li>Brainstorming Sessions</li>
+                <li>Peer Learning</li>
+              </ul>
+            </li>
+      
+            <li><strong>Win & Be Recognized:</strong> Exciting Prizes await!</li>
+          </ul>
+      
+          <p data-aos="fade-up" data-aos-delay="500" style="margin-top: 10px;">
+            <strong>Ignite Innovation</strong> is more than just an event; it's an opportunity to:
+          </p>
+      
+          <ul data-aos="fade-up" data-aos-delay="600">
+            <li>Be at the Forefront of technological trends</li>
+            <li>Amplify Your Voice and share your ideas</li>
+            <li>Expand Your Network with fellow innovators</li>
+            <li>Fuel Your Passion for technology</li>
+          </ul>
+      
+          <p data-aos="fade-up" data-aos-delay="700">
+            Don't miss out! Join us at <strong>Ignite Innovation</strong> and let your passion for technology shine!
+          </p>
+        </div>
+      </section>
+
+    <section id="details" class="gradient-bg">
+        <div class="container">
+            <div class="details-grid">
+                <div class="detail" data-aos="fade-up">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Date & Time</h3>
+                    <p> 3 August From 9:30 AM </p>
+                </div>
+                <div class="detail" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Venue *</h3>
+                    <p>Ramana Lab</p>
+                </div>
+                <div class="detail" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Prizes *</h3>
+                    <p>Cash Prize and Extra Benifts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register">
+        <div class="container">
+          <h2 data-aos="fade-up">Register Now</h2>
+          <p data-aos="fade-up" data-aos-delay="200">
+            Secure your spot and be a part of this innovative experience!
+          </p>
+          <form action="{% url 'submit_registration' %}" method="post" class="registration-form" id="registration-form" data-aos="fade-up" data-aos-delay="300">
+            {% csrf_token %} 
+            <div class="form-group">
+              <label for="student_name">Name *</label>
+              <input type="text" id="student_name" name="student_name" required/>
+            </div>
+            <div class="form-group">
+              <label for="register_number">Register Number *</label>
+              <input type="text" id="register_number" name="register_number"required/>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email"required/>
+              </div>
+            <div class="form-group">
+              <label for="branch">Branch:</label>
+              <select id="department" name="department" required>
+                <option value="">Select Branch</option>
+                <option value="CIC">CIC</option>
+                <option value="CSM">CSM</option>
+                <option value="CSD">CSD</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label for="year">Year:</label>
+              <select id="year" name="year" required>
+                <option value="">Select Year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                </select>
+            </div>
+  
+            <div class="form-group">
+              <label for="concept">Concept to Present:</label>
+              <select id="concept" name="concept" required>
+                <option value="">Select Concept</option>
+                <option value="Emerging Technologies">Emerging Technologies</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="New Trends">New Trends</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+            <div class="submit">
+                <button type="submit" class="btn">Register</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <div id="overlay">
+        <div id="overlay-content">
+          <p id="overlay-message"></p> 
+          <button onclick="hideOverlay()">OK</button>
+        </div>
+      </div>
+      <div id="loading-overlay">
+        <div id="loading-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>© 2024 Department of Data Engineering, MVGR College of Engineering</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        function showOverlay(message) {
+            document.getElementById('overlay-message').innerText = message;
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function hideOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function showLoading() {
+            document.getElementById('loading-overlay').style.display = 'flex';
+        }
+
+        function hideLoading() {
+            document.getElementById('loading-overlay').style.display = 'none';
+        }
+
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            showLoading();
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData 
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json(); 
+            })
+            .then(data => {
+                hideLoading(); 
+                if (data.success) {
+                    form.reset();
+                    showOverlay("Thanks for registering! Further details will be shared via email/WhatsApp.");
+                } else {
+                    showOverlay(data.message); 
+                }
+            })
+            .catch(error => {
+                hideLoading(); 
+                console.error('Error during registration:', error);
+                showOverlay('An error occurred during registration. Please try again later.');
+            });
+        });
+      </script>
+</body>
+</html>

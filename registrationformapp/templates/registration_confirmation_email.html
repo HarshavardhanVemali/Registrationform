@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>registration</title>
+  <style>
+    body {
+      font-family: 'Google Sans', sans-serif;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      color: #fff;
+    }
+
+    .hero-container {
+      background-color: #000;
+      text-align: center;
+      border: 2px solid #aaa;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      max-width: 600px;
+      margin: 20px;
+    }
+
+    .hero-heading {
+      font-size: 6vw;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 30px;
+    }
+
+    .white-text {
+      color: #fff;
+    }
+
+    .line-3 {
+      font-size: 2.5vw;
+      color: #fff;
+    }
+
+    .hero-description {
+      font-size: 1.5vw;
+      line-height: 1.6;
+      color: #aaa;
+      margin-bottom: 40px;
+      font-weight: 200;
+    }
+
+    .sign-in-button {
+      background: linear-gradient(90deg, #4285f4, #ea4335);
+      color: #fff;
+      padding: 23px;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-weight: 550;
+      display: inline-block;
+    }
+
+    .sign-in-button:hover {
+      background: #fff;
+      color: #4285f4;
+    }
+
+    @media (max-width: 768px) {
+      .hero-heading {
+        font-size: 10vw;
+      }
+
+      .line-3 {
+        font-size: 5vw;
+      }
+
+      .hero-description {
+        font-size: 2.5vw;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-heading {
+        font-size: 10vw;
+      }
+
+      .line-3 {
+        font-size: 7vw;
+      }
+
+      .hero-description {
+        font-size: 3.5vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-container">
+    <h2 class="white-text">Welcome to Ignite Innovation, {{ name }}!</h2>
+    <p class="white-text">Thank you for registering for Ignite Innovation!</p>
+    <p class="white-text">We're thrilled to have you join us for a day of exploring the latest in data engineering.</p>
+    <p class="white-text" style="color: #4285f4;">
+      Event starts in:
+      <div style="display: flex; justify-content: center; align-items: center; margin: 20px 0;">
+        <img src="https://i.countdownmail.com/3fp7lb.gif" style="width: 100%; max-width: 400px; margin: 0 auto;" border="0" alt="countdownmail.com"/>
+      </div>
+      <p style="color: #4285f4;">Venue: Raman Lab</p>
+    </p>
+    <p class="white-text">Your Slot Number<p style="color: #4285f4;">{{slot_number}}</p></p>
+    <p class="white-text">We'll be in touch soon with more information about the event schedule and location.</p>
+    <p class="white-text">See you there!</p>
+    <p class="white-text">The Ignite Innovation Team</p>
+  </div>
+</body>
+</html>
