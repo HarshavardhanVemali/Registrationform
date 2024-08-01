@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
+import parse
+import dj_database_url
+from django.core.wsgi import get_wsgi_application
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -84,6 +87,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+DATABASES["default"]=dj_database_url.parse("postgresql://registration_2hv5_user:Fq2tPsBF3U5aY9czhOsbLFbX1P314aQG@dpg-cql7563qf0us73fqt5sg-a.oregon-postgres.render.com/registration_2hv5")
 
 
 # Password validation
