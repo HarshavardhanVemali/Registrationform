@@ -8,6 +8,8 @@ class Register(models.Model):
     year = models.CharField(max_length=10, null=True)
     concept_to_present = models.CharField(max_length=30, null=True)
     slot_number = models.PositiveIntegerField(null=True, blank=True) 
+    evalutor_1=models.IntegerField(null=True)
+    evalutor_2=models.IntegerField(null=True)
 
     def __str__(self):
         return f"{self.register_number}"
