@@ -17,7 +17,7 @@ def register(request):
     return render(request,'registrationform.html')
 
 def send_registration_email(student_data):
-    subject = 'Welcome to Ignite Innovation!'
+    subject = 'Thanks for registering to Django One-Day Coding Challenge!'
     from_email = 'vemalivardhan@gmail.com'  
     recipient_list = [student_data['email']]
 
@@ -36,7 +36,6 @@ def send_registration_email(student_data):
         'hours': str(hours).zfill(2),
         'minutes': str(minutes).zfill(2),
         'seconds': str(seconds).zfill(2),
-        'slot_number':student_data['slot_number']
     }
 
     html_content = render_to_string('registration_confirmation_email.html', context)
@@ -58,28 +57,21 @@ def submit_registration(request):
         if Register.objects.filter(register_number=register_number).exists():
             return JsonResponse({'success': False, 'message': 'Student with this Register Number already exists!'})
         else:
-            with transaction.atomic(): 
-                last_slot = Register.objects.select_for_update().order_by('-slot_number').first()  # Lock the table for consistent slot assignment
-                last_slot_number = last_slot.slot_number if last_slot else 0
-                next_slot_number = last_slot_number + 1
 
-                registration = Register(
-                    register_number=register_number,
-                    name=request.POST.get('student_name'),
-                    email=request.POST.get('email'),
-                    branch=request.POST.get('department'),
-                    year=request.POST.get('year'),
-                    concept_to_present=request.POST.get('concept'),
-                    slot_number=next_slot_number 
-                )
-                registration.save()
-                student_data = {
-                    'name': registration.name,
-                    'email': registration.email,
-                    'slot_number':next_slot_number
-                }
-                send_registration_email(student_data)
+            registration = Register(
+                register_number=register_number,
+                name=request.POST.get('student_name'),
+                email=request.POST.get('email'),
+                branch=request.POST.get('department'),
+                year=request.POST.get('year'),
+            )
+            registration.save()
+            student_data = {
+                'name': registration.name,
+                'email': registration.email,
+            }
+            send_registration_email(student_data)
 
-                return JsonResponse({'success': True, 'message': 'Registration successful!'})
+            return JsonResponse({'success': True, 'message': 'Registration successful!'})
     else:
         return JsonResponse({'success': False, 'message': 'Invalid request method!'})

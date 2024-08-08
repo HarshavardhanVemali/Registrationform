@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-DATABASES["default"]=dj_database_url.parse("postgresql://registration_2hv5_user:Fq2tPsBF3U5aY9czhOsbLFbX1P314aQG@dpg-cql7563qf0us73fqt5sg-a.oregon-postgres.render.com/registration_2hv5")
+DATABASES["default"]=dj_database_url.parse("postgresql://django_challenge_user:l07Djbs932BlNO3xvecrrxSWRb0zmeIQ@dpg-cqqbmhd6l47c73arn9g0-a.oregon-postgres.render.com/django_challenge")
 
 
 # Password validation

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ignite Innovation | Data Engineering Event</title>
-        <link rel="stylesheet" href="{% static '/css/styles.css' %}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/college_logo.png' %}">
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETC | Django One-Day Coding Challenge</title> 
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/college_logo.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
 <body>
 
     <div id="particles-js"></div> 
@@ -39,20 +39,22 @@
 
     <section id="hero">
         <div class="hero-image-container">
-          <img src="{% static 'images/AI.avif' %}" alt="AI">
-          <img src="{% static 'images/Cyber.jpg' %}" alt="Cyber">
-          <img src="{% static 'images/datascience.jpg' %}" alt="Data Science">
-          <img src="{% static 'images/digital marketing.jpg' %}" alt="Digital Marketing">
-    
-          <img src="{% static 'images/AI.avif' %}" alt="AI"> 
-          <img src="{% static 'images/Cyber.jpg' %}" alt="Cyber"> 
-          <img src="{% static 'images/datascience.jpg' %}" alt="Data Science"> 
-          <img src="{% static 'images/digital marketing.jpg' %}" alt="Digital Marketing"> 
+          <img src="{% static 'images/django.png' %}" alt="Django">
+          <img src="{% static 'images/python.webp' %}" alt="Python">
+          <img src="{% static 'images/html.jpg' %}" alt="html"> 
+          <img src="{% static 'images/css.jpg' %}" alt="Css">
+          <img src="{% static 'images/js.png' %}" alt="js">
+
+          <img src="{% static 'images/django.png' %}" alt="Django">
+          <img src="{% static 'images/python.webp' %}" alt="Python">
+          <img src="{% static 'images/html.jpg' %}" alt="html"> 
+          <img src="{% static 'images/css.jpg' %}" alt="Css">
+          <img src="{% static 'images/js.png' %}" alt="js">
         </div>
         <div class="container hero-text"> 
           <div class="hero-content">
-            <h1 data-aos="fade-up">Ignite Innovation</h1>
-            <p data-aos="fade-up" data-aos-delay="200">A Data Engineering Brainstorming Extravaganza</p>
+            <h1 data-aos="fade-up">Django One-Day Coding Challenge</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Build Your Web App with Django</p>
             <a href="#register" class="btn" data-aos="fade-up" data-aos-delay="400">Register Now</a>
           </div>
         </div>
@@ -60,50 +62,52 @@
 
     <section id="about">
         <div class="container">
-          <h2 data-aos="fade-up">About the Event</h2>
+          <h2 data-aos="fade-up">About the Challenge</h2>
           <p data-aos="fade-up" data-aos-delay="200" style="text-align: center; margin-bottom: 10px;">
-            Are you brimming with innovative ideas and eager to explore the forefront of technological advancements? Then <strong>Ignite Innovation</strong> is the event for you! This dynamic event offers a platform to delve into cutting-edge technologies, share your vision, and learn from like-minded individuals. 
+            Ready to dive into the world of web development with Django? This challenge is your chance to learn the fundamentals and build a real-world web application in just one day! 
           </p>
       
-          <p data-aos="fade-up" data-aos-delay="300">
-            <strong>Here's what awaits you:</strong>
-          </p>
-      
-          <ul data-aos="fade-up" data-aos-delay="400">
-            <li>
-              <strong>Present Your Ideas:</strong> Share your insights and project ideas on topics shaping the future, including:
-              <ul>
-                <li>Artificial Intelligence (AI)</li>
-                <li>Machine Learning (ML)</li>
-                <li>Digital Marketing Trends</li>
-                <li>And More!</li>
-              </ul>
-            </li>
-      
-            <li>
-              <strong>Engage & Collaborate:</strong>
-              <ul>
-                <li>Brainstorming Sessions</li>
-                <li>Peer Learning</li>
-              </ul>
-            </li>
-      
-            <li><strong>Win & Be Recognized:</strong> Exciting Prizes await!</li>
+          <h3 data-aos="fade-up" data-aos-delay="300">Event Structure:</h3>
+          <div class="event-structure">
+            <div class="session" data-aos="fade-up" data-aos-delay="400">
+                <h4>Session 1: Django Fundamentals</h4>
+                <ul>
+                    <li>Introduction to HTML, CSS, JavaScript, and Django</li>
+                    <li>Setting Up Your Django Project</li>
+                    <li>Django MVT Architecture</li>
+                    <li>Creating Models and Admin Interface</li>
+                    <li>Handling Front-End Data with AJAX</li>
+                </ul>
+            </div>
+
+            <div class="session" data-aos="fade-up" data-aos-delay="500">
+                <h4>Session 2: Build & Deploy</h4>
+                <ul>
+                    <li>Teams will be formed and assigned a project</li>
+                    <li>Apply your Django skills to build a functional web app</li>
+                    <li>Learn to deploy your project on Render (free hosting)</li>
+                </ul>
+            </div>
+          </div>
+
+          <h3 data-aos="fade-up" data-aos-delay="600">Outcomes:</h3>
+          <ul data-aos="fade-up" data-aos-delay="700">
+            <li>Understand the power and efficiency of Django for web development</li>
+            <li>Gain practical, hands-on experience in building a web application from scratch</li>
+            <li>Learn deployment strategies to make your project live</li>
+            <li>Network with peers and mentors, and get inspired!</li>
           </ul>
       
-          <p data-aos="fade-up" data-aos-delay="500" style="margin-top: 10px;">
-            <strong>Ignite Innovation</strong> is more than just an event; it's an opportunity to:
+          <p data-aos="fade-up" data-aos-delay="800">
+            Don't miss this opportunity to level-up your web development skills. Register now and get ready to code! 
           </p>
-      
-          <ul data-aos="fade-up" data-aos-delay="600">
-            <li>Be at the Forefront of technological trends</li>
-            <li>Amplify Your Voice and share your ideas</li>
-            <li>Expand Your Network with fellow innovators</li>
-            <li>Fuel Your Passion for technology</li>
-          </ul>
-      
-          <p data-aos="fade-up" data-aos-delay="700">
-            Don't miss out! Join us at <strong>Ignite Innovation</strong> and let your passion for technology shine!
+          <h3 data-aos="fade-up" data-aos-delay="600">Important Note:</h3>
+          <p data-aos="fade-up" data-aos-delay="800">
+            <strong>Limited spots available!</strong> 
+            Due to classes on Saturday, we're holding a selection test to choose 
+            <strong>8 exceptional participants</strong> for this exclusive coding challenge.  
+            Selected students will receive attendance for the day. 
+            Don't miss this chance to level up your skills! 
           </p>
         </div>
       </section>
@@ -114,17 +118,12 @@
                 <div class="detail" data-aos="fade-up">
                     <i class="fas fa-calendar-alt"></i>
                     <h3>Date & Time</h3>
-                    <p> 3 August From 9:30 AM </p>
+                    <p> 10 August From 9:00 AM </p>
                 </div>
                 <div class="detail" data-aos="fade-up" data-aos-delay="200">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>Venue *</h3>
-                    <p>Raman Lab</p>
-                </div>
-                <div class="detail" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-trophy"></i>
-                    <h3>Prizes *</h3>
-                    <p>Cash Prize and Extra Benifts</p>
+                    <p>Seminar Hall</p>
                 </div>
             </div>
         </div>
@@ -168,17 +167,6 @@
                 <option value="3">3rd Year</option>
                 <option value="4">4th Year</option>
                 </select>
-            </div>
-  
-            <div class="form-group">
-              <label for="concept">Concept to Present:</label>
-              <select id="concept" name="concept" required>
-                <option value="">Select Concept</option>
-                <option value="Emerging Technologies">Emerging Technologies</option>
-                <option value="Digital Marketing">Digital Marketing</option>
-                <option value="New Trends">New Trends</option>
-                <option value="Others">Others</option>
-              </select>
             </div>
             <div class="submit">
                 <button type="submit" class="btn">Register</button>
